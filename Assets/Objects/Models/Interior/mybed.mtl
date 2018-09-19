@@ -1,0 +1,17 @@
+newmtl bed_h01_matbSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd bed_h01_mat.png
+Ni 1.00
+Ks 1.00 1.00 1.00
+Ns 18.00
+newmtl shadeSG
+illum 4
+Kd 0.25 0.31 0.40
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+Ns 18.00

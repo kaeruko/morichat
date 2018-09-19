@@ -1,0 +1,400 @@
+fileFormatVersion: 2
+guid: 5b81100deb98c49edbd252307606a497
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Componente#1_001
+    100004: Componente#1_003
+    100006: Componente#2_001
+    100008: Componente#2_002
+    100010: Componente#2_003
+    100012: Componente#2_004
+    100014: Componente#2_005
+    100016: Componente#2_006
+    100018: Componente#5_001
+    100020: Componente#6_001
+    100022: Componente#6_002
+    100024: Componente#6_003
+    100026: Componente#7_001
+    100028: Ground well light_001
+    100030: Ground well light_002
+    100032: Ground well light_003
+    100034: Ground well light_004
+    100036: Ground well light_005
+    100038: Ground well light_006
+    100040: Ground well light_007
+    100042: Ground well light_008
+    100044: Ground well light_009
+    100046: Ground well light_010
+    100048: Ground well light_011
+    100050: Ground well light_012
+    100052: Ground well light_013
+    100054: Layer0_001
+    100056: light-FL-M_001
+    100058: light-FL-M_003
+    100060: light-FL-M_005
+    100062: light-FL-M_007
+    100064: light-FL-M_009
+    100066: light-FL-M_011
+    100068: light-FL-M_013
+    100070: light-FL-M_015
+    100072: light-FL-M_017
+    100074: light-FL-M_019
+    100076: light-FL-M_021
+    100078: light-FL-M_023
+    100080: light-FL-M_025
+    100082: light-FL-S_001
+    100084: light-FL-S_003
+    100086: light-FL-S_005
+    100088: light-FL-S_007
+    100090: light-FL-S_009
+    100092: light-FL-S_011
+    100094: light-FL-S_013
+    100096: light-FL-S_015
+    100098: light-FL-S_017
+    100100: light-FL-S_019
+    100102: light-FL-S_021
+    100104: light-FL-S_023
+    100106: Light_Ground_Well_001
+    100108: Light_Ground_Well_002
+    100110: Light_Ground_Well_003
+    100112: Light_Ground_Well_004
+    100114: Light_Ground_Well_005
+    100116: Light_Ground_Well_006
+    100118: WC-suspended-2_001
+    400000: //RootNode
+    400002: Componente#1_001
+    400004: Componente#1_003
+    400006: Componente#2_001
+    400008: Componente#2_002
+    400010: Componente#2_003
+    400012: Componente#2_004
+    400014: Componente#2_005
+    400016: Componente#2_006
+    400018: Componente#5_001
+    400020: Componente#6_001
+    400022: Componente#6_002
+    400024: Componente#6_003
+    400026: Componente#7_001
+    400028: Ground well light_001
+    400030: Ground well light_002
+    400032: Ground well light_003
+    400034: Ground well light_004
+    400036: Ground well light_005
+    400038: Ground well light_006
+    400040: Ground well light_007
+    400042: Ground well light_008
+    400044: Ground well light_009
+    400046: Ground well light_010
+    400048: Ground well light_011
+    400050: Ground well light_012
+    400052: Ground well light_013
+    400054: Layer0_001
+    400056: light-FL-M_001
+    400058: light-FL-M_003
+    400060: light-FL-M_005
+    400062: light-FL-M_007
+    400064: light-FL-M_009
+    400066: light-FL-M_011
+    400068: light-FL-M_013
+    400070: light-FL-M_015
+    400072: light-FL-M_017
+    400074: light-FL-M_019
+    400076: light-FL-M_021
+    400078: light-FL-M_023
+    400080: light-FL-M_025
+    400082: light-FL-S_001
+    400084: light-FL-S_003
+    400086: light-FL-S_005
+    400088: light-FL-S_007
+    400090: light-FL-S_009
+    400092: light-FL-S_011
+    400094: light-FL-S_013
+    400096: light-FL-S_015
+    400098: light-FL-S_017
+    400100: light-FL-S_019
+    400102: light-FL-S_021
+    400104: light-FL-S_023
+    400106: Light_Ground_Well_001
+    400108: Light_Ground_Well_002
+    400110: Light_Ground_Well_003
+    400112: Light_Ground_Well_004
+    400114: Light_Ground_Well_005
+    400116: Light_Ground_Well_006
+    400118: WC-suspended-2_001
+    2100000: light-FL1
+    2100002: stainless4
+    2100004: Color_I25
+    2100006: _LightGray_
+    2100008: gra_pietra leccese
+    2100010: light-FL
+    2100012: f1
+    2100014: _DimGray_
+    2100016: _Burnt Umber_1
+    2100018: skp_front_default
+    2100020: 62229_112157985510495_112084092184551_96319_4667433_n
+    2100022: _Charcoal_
+    2100024: White
+    2100026: _DarkGray_
+    2100028: _Glass Gold Tint_
+    2100030: clear-acrylic
+    2100032: 20110630191746_5m23s
+    2300000: Componente#1_001
+    2300002: Componente#1_003
+    2300004: Componente#2_001
+    2300006: Componente#2_002
+    2300008: Componente#2_003
+    2300010: Componente#2_004
+    2300012: Componente#2_005
+    2300014: Componente#2_006
+    2300016: Componente#5_001
+    2300018: Componente#6_001
+    2300020: Componente#6_002
+    2300022: Componente#6_003
+    2300024: Componente#7_001
+    2300026: Ground well light_001
+    2300028: Ground well light_002
+    2300030: Ground well light_003
+    2300032: Ground well light_004
+    2300034: Ground well light_005
+    2300036: Ground well light_006
+    2300038: Ground well light_007
+    2300040: Ground well light_008
+    2300042: Ground well light_009
+    2300044: Ground well light_010
+    2300046: Ground well light_011
+    2300048: Ground well light_012
+    2300050: Ground well light_013
+    2300052: Layer0_001
+    2300054: light-FL-M_001
+    2300056: light-FL-M_003
+    2300058: light-FL-M_005
+    2300060: light-FL-M_007
+    2300062: light-FL-M_009
+    2300064: light-FL-M_011
+    2300066: light-FL-M_013
+    2300068: light-FL-M_015
+    2300070: light-FL-M_017
+    2300072: light-FL-M_019
+    2300074: light-FL-M_021
+    2300076: light-FL-M_023
+    2300078: light-FL-M_025
+    2300080: light-FL-S_001
+    2300082: light-FL-S_003
+    2300084: light-FL-S_005
+    2300086: light-FL-S_007
+    2300088: light-FL-S_009
+    2300090: light-FL-S_011
+    2300092: light-FL-S_013
+    2300094: light-FL-S_015
+    2300096: light-FL-S_017
+    2300098: light-FL-S_019
+    2300100: light-FL-S_021
+    2300102: light-FL-S_023
+    2300104: Light_Ground_Well_001
+    2300106: Light_Ground_Well_002
+    2300108: Light_Ground_Well_003
+    2300110: Light_Ground_Well_004
+    2300112: Light_Ground_Well_005
+    2300114: Light_Ground_Well_006
+    2300116: WC-suspended-2_001
+    3300000: Componente#1_001
+    3300002: Componente#1_003
+    3300004: Componente#2_001
+    3300006: Componente#2_002
+    3300008: Componente#2_003
+    3300010: Componente#2_004
+    3300012: Componente#2_005
+    3300014: Componente#2_006
+    3300016: Componente#5_001
+    3300018: Componente#6_001
+    3300020: Componente#6_002
+    3300022: Componente#6_003
+    3300024: Componente#7_001
+    3300026: Ground well light_001
+    3300028: Ground well light_002
+    3300030: Ground well light_003
+    3300032: Ground well light_004
+    3300034: Ground well light_005
+    3300036: Ground well light_006
+    3300038: Ground well light_007
+    3300040: Ground well light_008
+    3300042: Ground well light_009
+    3300044: Ground well light_010
+    3300046: Ground well light_011
+    3300048: Ground well light_012
+    3300050: Ground well light_013
+    3300052: Layer0_001
+    3300054: light-FL-M_001
+    3300056: light-FL-M_003
+    3300058: light-FL-M_005
+    3300060: light-FL-M_007
+    3300062: light-FL-M_009
+    3300064: light-FL-M_011
+    3300066: light-FL-M_013
+    3300068: light-FL-M_015
+    3300070: light-FL-M_017
+    3300072: light-FL-M_019
+    3300074: light-FL-M_021
+    3300076: light-FL-M_023
+    3300078: light-FL-M_025
+    3300080: light-FL-S_001
+    3300082: light-FL-S_003
+    3300084: light-FL-S_005
+    3300086: light-FL-S_007
+    3300088: light-FL-S_009
+    3300090: light-FL-S_011
+    3300092: light-FL-S_013
+    3300094: light-FL-S_015
+    3300096: light-FL-S_017
+    3300098: light-FL-S_019
+    3300100: light-FL-S_021
+    3300102: light-FL-S_023
+    3300104: Light_Ground_Well_001
+    3300106: Light_Ground_Well_002
+    3300108: Light_Ground_Well_003
+    3300110: Light_Ground_Well_004
+    3300112: Light_Ground_Well_005
+    3300114: Light_Ground_Well_006
+    3300116: WC-suspended-2_001
+    4300000: light-FL-S_023
+    4300002: light-FL-S_021
+    4300004: Light_Ground_Well_006
+    4300006: light-FL-S_019
+    4300008: light-FL-S_017
+    4300010: Light_Ground_Well_005
+    4300012: light-FL-S_015
+    4300014: light-FL-S_013
+    4300016: Light_Ground_Well_004
+    4300018: light-FL-S_011
+    4300020: light-FL-S_009
+    4300022: Light_Ground_Well_003
+    4300024: light-FL-S_007
+    4300026: light-FL-S_005
+    4300028: Light_Ground_Well_002
+    4300030: light-FL-S_003
+    4300032: light-FL-S_001
+    4300034: Light_Ground_Well_001
+    4300036: WC-suspended-2_001
+    4300038: Componente#2_006
+    4300040: Componente#2_005
+    4300042: Componente#6_003
+    4300044: Componente#1_003
+    4300046: Componente#2_004
+    4300048: Componente#2_003
+    4300050: Componente#6_002
+    4300052: Componente#1_001
+    4300054: Componente#7_001
+    4300056: light-FL-M_025
+    4300058: Ground well light_013
+    4300060: light-FL-M_023
+    4300062: Ground well light_012
+    4300064: light-FL-M_021
+    4300066: Ground well light_011
+    4300068: light-FL-M_019
+    4300070: Ground well light_010
+    4300072: light-FL-M_017
+    4300074: Ground well light_009
+    4300076: light-FL-M_015
+    4300078: Ground well light_008
+    4300080: light-FL-M_013
+    4300082: Ground well light_007
+    4300084: light-FL-M_011
+    4300086: Ground well light_006
+    4300088: light-FL-M_009
+    4300090: Ground well light_005
+    4300092: light-FL-M_007
+    4300094: Ground well light_004
+    4300096: light-FL-M_005
+    4300098: Ground well light_003
+    4300100: light-FL-M_003
+    4300102: Ground well light_002
+    4300104: light-FL-M_001
+    4300106: Ground well light_001
+    4300108: Componente#2_002
+    4300110: Componente#2_001
+    4300112: Componente#6_001
+    4300114: Componente#5_001
+    4300116: Layer0_001
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

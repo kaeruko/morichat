@@ -1,0 +1,754 @@
+キャベツ
+ナス
+肉
+がんも
+白菜
+ねぎ
+
+
+Character1_Ctrl_ReferenceとCharacter1_Referenceの違い
+Character1_Ctrl_Referenceがボーンっぽいような
+どうも角度は保存されても位置が変わってしまう
+スケルトンを固定できないの？
+
+
+File 'men' has an invalid Avatar Rig Configuration. Missing or invalid transform:
+  Required human bone 'RightUpperLeg' not found
+
+UnityEngine.GUIUtility:ProcessEvent(Int32, IntPtr)
+
+やっぱり同じエラーだ
+Character1_RightUpLegなのに、UpperLegってどこからきたんだろう
+Unity RightUpperLegでぐぐってみよう
+Character1_RightUpLegになってる
+
+File 'tes' avatar creation failed:
+  Transform 'J_L_HairSide_00' for human bone 'LeftEye' not found
+
+File 'tes' has an invalid Avatar Rig Configuration. Missing or invalid transform:
+  Required human bone 'LeftLowerLeg' not found
+
+UnityEngine.GUIUtility:ProcessEvent(Int32, IntPtr)
+
+The left arm doesn't seem to be parallel to the X axis.
+これのせい？
+3:21 目覚め
+対象の２つを結合すると緑になる
+Unityに持っていくと真っ黒になる
+シェーダ？
+
+ミラー一致ってどうやって使うんだ？
+
+シェーダはがれたけど動いたわ
+あとはスキンとウェイトを調整すればなんとかなりそう
+テクスチャ貼れば感じ出るかな
+
+OnPointerDown
+反応しない。なんだろ
+オイゲン
+
+tapCount
+呼べない
+
+dictionary型はlengthでとれないのか
+なにでとれる
+
+MAYAでテクスチャはれない
+
+
+曲の作り方
+
+既存の曲を分解する
+ドンキーコング2の森とか
+
+
+オブジェクトのコライダはどこに置いても反応する
+壁が数字で設定してるっぽい
+
+
+
+鎖の作り方
+https://www.youtube.com/watch?v=IK2CVwctb24
+
+カーテン
+https://www.youtube.com/watch?v=UQRAdsv3_OM
+
+
+
+
+壁コライダの謎
+
+オブジェクトのコライダがboxコライダで判定していることがわかったよきな
+しかしまだ壁のコライダをどう判定しているのか謎のままだった…
+
+1x16 0x4 1x11 0x3 1x12 0x5 1x10 0x13 1x2 0x13 1x2 0x13 1x2 0x13 1x2 0x13 1x2 0x13 1x2 0x13 1x2 0x13 1x4 0 1x11
+1x14
+0x9
+1x4
+0x8
+1x2
+0x10
+1x2
+0x10
+1x2
+0x10
+1x2
+0x10
+1x2
+0x10
+1x13
+
+
+
+
+
+
+
+1x14 0x9 1x4 0x8 1x2 0x10 1x2 0x10 1x2 0x10 1x2 0x10 1x2 0x10 1x13
+
+ repeat x=0 z=0 tag=1
+ repeat x=1 z=0 tag=1
+ repeat x=2 z=0 tag=1
+ repeat x=3 z=0 tag=1
+ repeat x=4 z=0 tag=1
+ repeat x=5 z=0 tag=1
+ repeat x=6 z=0 tag=1
+ repeat x=7 z=0 tag=1
+ repeat x=8 z=0 tag=1
+ repeat x=9 z=0 tag=1　　　
+ repeat x=10 z=0 tag=1
+ repeat x=11 z=0 tag=1
+
+ repeat x=0 z=1 tag=1
+ repeat x=1 z=1 tag=1　　1x14
+ repeat x=2 z=1 tag=0
+ repeat x=3 z=1 tag=0
+ repeat x=4 z=1 tag=0
+ repeat x=5 z=1 tag=0
+ repeat x=6 z=1 tag=0
+ repeat x=7 z=1 tag=0
+ repeat x=8 z=1 tag=0
+ repeat x=9 z=1 tag=0
+ repeat x=10 z=1 tag=0   0x9
+ repeat x=11 z=1 tag=1
+
+ repeat x=0 z=2 tag=1
+ repeat x=1 z=2 tag=1
+ repeat x=2 z=2 tag=1  1x4
+ repeat x=3 z=2 tag=0
+ repeat x=4 z=2 tag=0
+ repeat x=5 z=2 tag=0
+ repeat x=6 z=2 tag=0
+ repeat x=7 z=2 tag=0
+ repeat x=8 z=2 tag=0
+ repeat x=9 z=2 tag=0
+ repeat x=10 z=2 tag=0  0x8
+ repeat x=11 z=2 tag=1
+
+ repeat x=0 z=3 tag=1  1x2
+ repeat x=1 z=3 tag=0
+ repeat x=2 z=3 tag=0
+ repeat x=3 z=3 tag=0
+ repeat x=4 z=3 tag=0
+ repeat x=5 z=3 tag=0
+ repeat x=6 z=3 tag=0
+ repeat x=7 z=3 tag=0
+ repeat x=8 z=3 tag=0
+ repeat x=9 z=3 tag=0
+ repeat x=10 z=3 tag=0  0x10
+ repeat x=11 z=3 tag=1
+
+ repeat x=0 z=4 tag=1  1x2
+ repeat x=1 z=4 tag=0
+ repeat x=2 z=4 tag=0
+ repeat x=3 z=4 tag=0
+ repeat x=4 z=4 tag=0
+ repeat x=5 z=4 tag=0
+ repeat x=6 z=4 tag=0
+ repeat x=7 z=4 tag=0
+ repeat x=8 z=4 tag=0
+ repeat x=9 z=4 tag=0
+ repeat x=10 z=4 tag=0
+ repeat x=11 z=4 tag=1
+
+ repeat x=0 z=5 tag=1
+ repeat x=1 z=5 tag=0
+ repeat x=2 z=5 tag=0
+ repeat x=3 z=5 tag=0
+ repeat x=4 z=5 tag=0
+ repeat x=5 z=5 tag=0
+ repeat x=6 z=5 tag=0
+ repeat x=7 z=5 tag=0
+ repeat x=8 z=5 tag=0
+ repeat x=9 z=5 tag=0
+ repeat x=10 z=5 tag=0
+ repeat x=11 z=5 tag=1
+
+ repeat x=0 z=6 tag=1
+ repeat x=1 z=6 tag=0
+ repeat x=2 z=6 tag=0
+ repeat x=3 z=6 tag=0
+ repeat x=4 z=6 tag=0
+ repeat x=5 z=6 tag=0
+ repeat x=6 z=6 tag=0
+ repeat x=7 z=6 tag=0
+ repeat x=8 z=6 tag=0
+ repeat x=9 z=6 tag=0
+ repeat x=10 z=6 tag=0
+ repeat x=11 z=6 tag=1
+
+ repeat x=0 z=7 tag=1
+ repeat x=1 z=7 tag=0
+ repeat x=2 z=7 tag=0
+ repeat x=3 z=7 tag=0
+ repeat x=4 z=7 tag=0
+ repeat x=5 z=7 tag=0
+ repeat x=6 z=7 tag=0
+ repeat x=7 z=7 tag=0
+ repeat x=8 z=7 tag=0
+ repeat x=9 z=7 tag=0
+ repeat x=10 z=7 tag=0
+ repeat x=11 z=7 tag=1
+
+ repeat x=0 z=8 tag=1
+ repeat x=1 z=8 tag=1
+ repeat x=2 z=8 tag=1
+ repeat x=3 z=8 tag=1
+ repeat x=4 z=8 tag=1
+ repeat x=5 z=8 tag=1
+ repeat x=6 z=8 tag=1
+ repeat x=7 z=8 tag=1
+ repeat x=8 z=8 tag=1
+ repeat x=9 z=8 tag=1
+ repeat x=10 z=8 tag=1
+ repeat x=11 z=8 tag=1
+
+1列ごとに設定してるわけじゃないんだな
+
+
+
+2階のほうがちいちゃいので二階でやるか
+
+collisionMap[x,z] = int.Parse(contains2[0]); //add tag to current co-ordinates
+
+引数のx,yよくわからないからjson.stringtoわかってからやるか
+
+
+UVも謎だわ…
+いっこシンプルなもの作ってUnityとMayaでどうマッピングが変わるか試してみよう
+
+左上を原点0としてるのはわかったけど、🔺ここまで長々と設定する必要あるのか
+
+
+	private int[,] collisionMap;
+
+なにこの
+int[,]
+って・・・
+	private int[.] collisionMap2;
+
+これじゃダメだからカンマだけ特別なのか…
+
+	private int[,,] collisionMap2;
+
+	これはありなんだ
+
+	なぜ15になってしまうのか…
+
+
+15の謎を追え
+12に設定してもなぜか15になってしまうwidth
+どういうことなのか・・・
+
+あ、やっぱり。15はF1だった
+
+
+下から進まない謎を追え
+getSlopeOfPosition
+ここではtagは見てないみたい
+tagの前にslopeを見るのか
+
+modelを見てわかった
+高さが違うんだ…
+
+目的地の高さを知る謎を追え
+
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0
+0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0
+0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0
+0 0 0 0 0 0 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0
+0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0
+0 0 0 0 0 0 1 1 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0
+0 0 0 0 0 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0
+0 0 0 0 0 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0
+0 0 0 0 0 1 1 0 0 0 0 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0
+0 0 0 0 0 1 1 0 0 0 0 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0
+0 0 0 0 0 1 1 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0
+0 0 0 0 0 1 1 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0
+0 0 0 0 0 1 1 0 0 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0
+0 0 0 0 0 1 1 0 0 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0
+0 0 0 0 0 1 1 0 0 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 1 1 0
+0 0 0 0 0 1 1 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 1 1 0
+0 0 0 0 0 1 1 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 1 1 0
+0 0 0 1 1 1 1 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1 1 1 1 0 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 1 1 0
+0 0 0 1 1 1 1 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 1 1 1 1 1 1 1 0 0 0 0 0 0 0 1 1 0
+0 0 0 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 1 1 1 1 0 0 0 0 0 0 0 1 1 0
+0 0 0 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 1 1 1 1 1 0 0 0 0 0 0 1 1 0
+0 0 0 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 1 1 1 1 1 0 0 0 0 0 1 1 0
+0 1 1 1 1 1 1 1 0 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 0 0 0 0 1 1 0
+0 1 1 1 1 1 1 1 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 0 0 0 0 0 1 1 1 0 0 0 1 1 1 1 0 1 1 1 1 1 0 0 0 0 1 1 0
+0 1 1 1 1 1 1 1 0 1 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 0 0 0 1 1 0
+0 1 1 1 1 1 1 1 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 1 1 0
+
+
+mapRockCityの謎を追え
+高低差があるが階段で登れている謎
+slopeをよく見てみなければ
+しきい値の一歩一歩なら進めるとかかな…
+
+
+マップだけ取り替えたいけど取り替えられない
+3dsエクスポートできなきゃ
+3ds.export.bundleかな？
+
+
+yディスタンスの謎を追え
+Mathf.Abs((transform.position.y+movement.y) - transform.position.y);
+現在地点+移動先(つまり移動後)　ー現在位置
+移動後-現在
+
+if(yDistance <= currentSlope || yDistance <= destinationSlope){
+
+今の高さより高低差が小さいか、
+目的地の高さより高低差が小さい
+
+movementは1しか動かないから
+移動先ではないな
+移動できるギリギリ
+つまり1以内という話だ
+
+
+
+階段の処理や自動イベントの発動など、まだまだたくさんの謎がある
+
+さてではこれを踏まえてマップを作ってみますか
+
+
+新たな謎
+階段横から行けて下から行けない理由
+そしてshortestなんとかがきかない理由
+なんとなく推測で左上が0としてたけど、違うのでは…
+
+
+xModifierとzModifierの謎を追え
+
+早く森のおうちがつくりたい
+
+川べ川辺のおうち
+あ、イベントも読めなきゃ…
+
+22が 1
+
+これをtouch対応に直すのは相当大変そう
+目的地
+
+
+横から行ける謎を追え
+
+下からだとdestinationslopeが0になっていけない
+destinationSlopeが0になる謎を追え
+
+		mapHitColliders = Physics.RaycastAll(position+(movement*0.45f)+new Vector3(0,1.5f,0), Vector3.down);
+
+		このdownを変えたら通れなくなった
+		レイキャストについて調べてみる必要がありそう
+
+置いといて…
+イベントと階段どうすべ
+
+
+置いといて
+森を作りたいから森のマップをみよう
+0x37 1x5 0x29 1x5 0x48 0x37 1x5 0x29 1x5 0x48 0x37 1x5 0x29 1x5 0x48 0x37 1x5 0x14 1x20 0x48 0x37 1x5 0x14 1x20 0x48 0x37 1x8 0x11 1x20 0x48 0x37 1x16 0x3 1x20 0x48 0x37 1x39 0x48 0x37 1x9 0x5 1x2 0 1x5 0x65 0x37 1x9 0x9 1x4 0x65 0x37 1x6 0x12 1x4 0x65 0x51 1x5 0x68 0x27 2x2 0x6 2x2 0x12 1x3 0x31 1x26 0x15 0x26 2x11 0x3 1x10 0x33 1x26 0x15 0x26 2x11 0x46 1x26 0x15 0x26 2x11 0x46 1x3 0x38 0x26 2x10 0x47 1x3 0x38 0x26 2x10 0x47 1x3 0x38 0x28 2x7 0x45 1x6 0x38 0x28 1 2x5 1x2 0x17 1x6 0x21 1x6 0x38 0x22 1x7 2x6 1x7 0x11 1 0x4 1 0x21 1x6 0x38 0x16 1x8 0x4 2x8 0x5 1x2 0x10 1 0x4 1 0x21 1x3 0x41 0x16 1x8 0x4 2x12 0x2 1x3 0x8 1 0x4 1 0x6 1x8 0 1x9 0x41 0x16 1x2 0x8 2x15 0x3 1x3 0x6 1 0x4 1 0x6 1x8 0 1x9 0x41 1x18 0x6 2x17 0x5 1x5 0 1x2 0x4 1x15 0 1x9 0x41 0x17 1 0x2 2x21 0x9 1x3 0x11 1x4 0x56 0x17 1 0x2 2x21 0x83 0x17 1 0x2 2x20 0x84 0x17 1 0x2 2x19 0x85 0x17 1 0x4 2x17 0x85 0x17 1 0x4 2x16 0x86 0x17 1 0x5 2x15 0x86 0x17 1 0x5 2x14 0x87 0x17 1x2 0x6 2x11 0x88 0x17 1x2 0x10 2x7 0x88 0x17 1x2 0x13 2x4 0x88 0x17 1x2 0x15 2x4 0x86 0x17 1x2 0x15 2x4 0x86 0x17 1x2 0x16 2x3 0x86 0x17 1x2 0x16 2x3 0x86 0x17 1x2 0x16 2x3 0x86 0x17 1x2 0x15 2x3 0x87 0x17 1x2 0x15 2x2 0x88 0x17 1x2 0x15 2x2 0x88 0x17 1x2 0x15 2x2 0x88 0x13 1x6 0x15 2x3 0x87 0x13 1x6 0x15 2x3 0x87 0x13 1x2 0x19 2x7 0x27 1x41 0x15 0x13 1x2 0x20 2x6 0x27 1x41 0x15 1x15 0x22 2x8 0x23 1x2 0x54 1x15 0x24 2x6 0x23 1x2 0x54 0x41 2x4 0x23 1x2 0x54 0x41 2x4 0x23 1x2 0x54 0x43 2x2 0x23 1x2 0x54 0x43 2x2 0x23 1x2 0x54 0x43 2x2 0x6 1x19 0x54 0x43 2x2 0x6 1 0x11 1x7 0x54 0x51 1 0x11 1 0x12 1x18 0x30 0x51 1x2 0x10 1 0x12 1x18 0x30 0x42 2x2 0x8 1 0x10 1 0x12 1x3 0x13 1x2 0x30 0x42 2x2 0x17 1x3 0x12 1x3 0x13 1x2 0x30 0x42 2x2 0x32 1x3 0x13 1x2 0x30 0x42 2x2 0x6 1x3 0x23 1x3 0x13 1x2 0x7 1x13 0x10 0x42 2x4 0x4 1 0x10 1 0x15 1x2 0x13 1x15 0 1x6 0x10 0x42 2x6 0x2 1 0x10 1 0x15 1x2 0x13 1x11 0x9 1x6 0x6 0x42 2x8 1x3 0x8 1 0x15 1x2 0x33 1x6 0x6 0x42 2x10 1 0x8 1 0x15 1x2 0x37 1x2 0x6 0x46 2x6 1x7 0x2 1x3 0x11 1x4 0x37 1x2 0x6 0x49 2x9 1x6 0x11 1x4 0x37 1x2 0x6 0x51 2x11 1x6 0x7 1x2 2x4 0x35 1x2 0x6 0x52 2x10 1x6 0x2 1x2 0x2 1x3 2x4 0x35 1x2 0x6 0x56 2x10 1x2 0x2 1x7 2x6 0x33 1x2 0x6 0x58 2x10 0x2 1x6 2x7 0x33 1x2 0x6 0x64 2x4 0x5 2x22 0x21 1x2 0x6 0x64 2x31 0x21 1x2 0x6 0x66 2x19 0x8 2x2 0x21 1x2 0x6 0x66 2x19 0x8 2x2 0x21 1x2 0x6 0x70 2x11 0x12 2x6 0x17 1x2 0x6 0x93 2x6 0x17 1x2 0x6 0x96 2x3 0x17 1x2 0x6 0x96 2x3 0x17 1x2 0x6 0x97 2x2 0x17 1x2 0x6 0x97 2x2 0x17 1x2 0x6 0x97 2x2 0x17 1x2 0x6 0x97 2x3 0x16 1x2 0x6 0x97 2x4 0x15 1x2 0x6 0x97 2x4 0x15 1x2 0x6 0x99 2x2 0x15 1x2 0x6
+うひゃー…
+えええ
+ひー…
+うーん、えー…
+こりゃこりゃ
+
+
+<?php
+$str = "string with utf-8 chars åèä - doo-bee doo-bee dooh";
+$fp = fopen($this->_file, "wb");
+if ($fp) {
+  $len = strlen($str);
+  fwrite($fp, $str, $len);
+}
+?>
+
+PS This is found i the PEAR::Cache_Lite package (Lite.php) - Reported
+
+2. Iterating through a string's characters:
+
+<?php
+$str = "string with utf-8 chars åèö - doo-bee doo-bee dooh";
+$newStr = "";
+for ($i = 0; $i < strlen($str); $i++) {
+  $newStr .= $str[$i];
+}
+?>
+
+どこから始まるんだっけ
+キータップをキャッチするところから始めよう
+
+インタラクトがまだ未解明だったはず
+
+
+	private IEnumerator control(){
+		bool still;
+				else if(Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0){
+
+					//if most recent direction pressed is held, but it isn't the current direction, set it
+
+
+	void Update(){
+		//ここでキー判定をしてる
+		//check for new inputs, so that the new direction can be set accordingly
+		if(Input.GetButtonDown("Horizontal")){
+			if(Input.GetAxisRaw("Horizontal") > 0){
+			//	Debug.Log("NEW INPUT: Right");
+				mostRecentDirectionPressed = 1;
+			}
+
+ここっぽい
+
+これをタップに書き換えれば？
+
+インタラクティブ不明だから確認しなきゃ
+
+画面ほそっ
+
+
+
+
+Began	画面に指が触れたとき
+Moved	画面上で指が動いたとき
+Stationary	指が画面に触れているが動いてはいないとき
+Ended	画面から指が離れたとき
+Canceled	システムがタッチの追跡をキャンセルしました
+
+おし続けたい時はどうしよう
+
+タップ判定の処理終えた後絶対エディタから動作確認したいから
+分けなきゃ
+
+まずはタップ考えず分けるところから始めよう
+
+というかこれマウスポジション考えてないパターンだ
+上下左右を1つずつしか考慮してない
+
+mostRecentDirectionPressed
+これいる？
+3Dにすれば反転とかも気にしなくてよさそうだけどとりあえず残しておこう
+
+
+	void Start () {
+
+		if(!surfing){
+			updateMount(false);
+		}
+
+		updateAnimation("walk",walkFPS);
+		StartCoroutine("animateSprite");
+		animPause = true;
+
+		reflect(false);
+		followerScript.reflect(false);
+
+		updateDirection(direction);
+
+		StartCoroutine(control());
+ここから
+controlを実行してる
+
+
+アニメのあたりはいらないから、カプセルに差し替えようかな
+アニメ変更しないと下にしか行かなくなる
+これはアニメ変更のタイミングで現在どこ向いてるか変えてるな
+どこだっていいだろう右押したら右行くようにしろよ
+
+
+一番最初に
+updateAnimationにwalkを代入してる
+
+なるほど、
+アニメーションが変わった時にFPSも変更するのか
+モデル変えたときにも使えそう
+アニメーションまわりは見通し悪いけどいったん置いとこう
+でもアニメーションまわりの処理に移動関係が入ってるんだよな
+
+
+一番近いオブジェクトの位置って何に使うんだ？
+closestDistance使ってない疑惑
+でも邪魔になってないなら取っておこう
+position変えるまでの変遷を見よう
+
+
+	void Start () {
+		StartCoroutine(control());
+
+↓
+	private IEnumerator control(){
+	else if(Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0){
+↓
+
+
+if(mostRecentDirectionPressed != direction && isDirectionKeyHeld(mostRecentDirectionPressed)){
+	updateDirection(mostRecentDirectionPressed);
+	if(!moving){	// unless player has just moved, wait a small amount of time to ensure that they have time to
+		yield return new WaitForSeconds(directionChangeInputDelay);} // let go before moving (allows only turning)
+}
+何かを実行中はそれが終わるまで待つ
+
+向き変更が終わった後にmoveForwardを実行
+	//if moving is true (including by momentum from the previous step) then attempt to move forward.
+	if(moving){
+		still = false;
+		yield return StartCoroutine(moveForward());
+	}
+
+
+	private IEnumerator moveForward(){
+		Vector3 movement = getForwardVector();
+Debug.Log("moveForward movement:"+movement);
+		bool ableToMove = false;
+
+
+
+	public Vector3 getForwardVectorRaw(int direction){
+		//set vector3 based off of direction
+		Vector3 forwardVector = new Vector3(0,0,0);
+		if(direction == 0){
+			forwardVector = new Vector3(0,0,1f);}
+		else if(direction == 1){
+			forwardVector = new Vector3(1f,0,0);}
+		else if(direction == 2){
+			forwardVector = new Vector3(0,0,-1f);}
+		else if(direction == 3){
+			forwardVector = new Vector3(-1f,0,0);}
+		return forwardVector;
+	}
+
+
+	public Vector3 getForwardVector(){
+		return getForwardVector(direction, true);}
+	public Vector3 getForwardVector(int direction){
+		return getForwardVector(direction, true);}
+	public Vector3 getForwardVector(int direction, bool checkForBridge){
+		//set initial vector3 based off of direction
+		Vector3 movement = getForwardVectorRaw(direction);
+
+
+
+	public Vector3 getForwardVector(int direction, bool checkForBridge){
+		//set initial vector3 based off of direction
+		Vector3 movement = getForwardVectorRaw(direction);
+
+		//Check destination map	and bridge																//0.5f to adjust for stair height
+		//cast a ray directly downwards from the position directly in front of the player		//1f to check in line with player's head
+		RaycastHit[] hitColliders = Physics.RaycastAll(transform.position+movement+new Vector3(0,1.5f,0), Vector3.down);
+		RaycastHit mapHit = new RaycastHit();
+		RaycastHit bridgeHit = new RaycastHit();
+		//cycle through each of the collisions
+		if (hitColliders.Length > 0){
+			for (int i = 0; i < hitColliders.Length; i++){
+				//if map has not been found yet
+				if(mapHit.collider == null){
+					//if a collision's gameObject has a mapCollider, it is a map. set it to be the destination map.
+					if(hitColliders[i].collider.gameObject.GetComponent<MapCollider>() != null){
+						mapHit = hitColliders[i];
+						destinationMap = mapHit.collider.gameObject.GetComponent<MapCollider>();
+					}
+				}
+				else if(bridgeHit.collider != null && checkForBridge){ //if both have been found
+					i = hitColliders.Length;	//stop searching
+				}
+				//if bridge has not been found yet
+				if(bridgeHit.collider == null && checkForBridge){
+					//if a collision's gameObject has a BridgeHandler, it is a bridge.
+					if(hitColliders[i].collider.gameObject.GetComponent<BridgeHandler>() != null){
+						bridgeHit = hitColliders[i];
+					}
+				}
+				else if(mapHit.collider != null){ //if both have been found
+					i = hitColliders.Length;	//stop searching
+				}
+			}
+		}
+
+		if(bridgeHit.collider != null){
+			//modify the forwards vector to align to the bridge.
+			movement -= new Vector3(0,(transform.position.y - bridgeHit.point.y),0);
+		}
+		//if no bridge at destination
+		else if(mapHit.collider != null){
+			//modify the forwards vector to align to the mapHit.
+			movement -= new Vector3(0,(transform.position.y - mapHit.point.y),0);
+		}
+
+
+		float currentSlope = Mathf.Abs(MapCollider.getSlopeOfPosition(transform.position, direction));
+		float destinationSlope = Mathf.Abs(MapCollider.getSlopeOfPosition(transform.position+getForwardVectorRaw(), direction, checkForBridge));
+		float yDistance = Mathf.Abs((transform.position.y+movement.y) - transform.position.y);
+		yDistance = Mathf.Round(yDistance*100f)/100f;
+
+		Debug.Log("currentSlope: "+currentSlope+", destinationSlope: "+destinationSlope+", yDistance: "+yDistance+" movement:"+movement);
+
+		//if either slope is greater than 1 it is too steep.
+		if(currentSlope <= 1 && destinationSlope <= 1){
+			//if yDistance is greater than both slopes there is a vertical wall between them
+			if(yDistance <= currentSlope || yDistance <= destinationSlope){
+				return movement;
+			}
+		}
+		return Vector3.zero;
+	}
+
+
+このへんだ
+
+getForwardVectorRaw
+
+これを移動先にしたらどうなるのかしら
+getForwardVector多すぎて引数変えるのしんどい
+
+
+タップ検知から移動プラスまでの処理が多い
+
+なんで突然cameraが消えたんだろう
+
+mainCameraとは、cameraのことではないのか・・・
+なんでmainCamaraが表示されてるんだろう
+これがrenderTextureなのか
+
+
+cameraはプレイヤに付随して動く
+mainCameraはcameraの見ているものを見る
+cameraが真っ暗になればmainCameraもまっくら
+
+
+1からスクリプトを書く(コピペで)
+Cameraだけでカメラ写せない理由(nocameraになる)
+
+リニアで移動する方法を考えなくては
+とりあえず一歩だけ進めてみるか
+
+コライダ判定出来ない謎を追え
+コライダチェックしてるところを探そう
+
+微妙にオブジェクト判定出来る位置もあるけどないところもある
+Physics.OverlapSphereの引数が木になる
+現在地から目的地までの間でチェック出来ないものか
+
+チェックしてるところと、止まるところ
+どこで止まるんだろう
+
+Enumlator実行してるところでオブジェクトチェックしよう
+
+
+普通
+
+moveForward←getForwardVector(返り値movement, RayCastAll)←getForwardVectorRaw(返り値forwardVector)
+↓
+moveForward←getDistinationVectorRaw(RaycastAll)
+
+
+RaycastAllの引数がわからない
+		RaycastHit[] hitColliders = Physics.RaycastAll(transform.position, Vector3.down, 100f);
+これどうやるべきか
+
+テクスチャ
+https://www.textures.com/browse/smooth/1083
+
+
+
+RaycastHit[] hitRays = Physics.RaycastAll(transform.position+Vector3.up, Vector3.down);
+Collider[] hitColliders = Physics.OverlapSphere (transform.position+movement+new Vector3(0,0.5f,0), 0.4f);
+
+Debug.Log("hitColliders.Length:"+hitColliders.Length);
+			if(hitColliders.Length > 0){
+				for(int i = 0; i < hitColliders.Length; i++){
+					if(hitColliders[i].name.ToLowerInvariant().Contains("_object")){
+						objectCollider = hitColliders[i];
+Debug.Log("objectCollider:" + objectCollider.transform.parent.gameObject);
+
+
+
+Physics.RaycastAll
+はどうやって方向チェックしてるんだろう
+
+普段はPhysics.OverlapSphereを使ってるみたい
+Physics.OverlapSphereは円
+
+
+初期位置
+		RaycastHit[] hitRays = Physics.RaycastAll(transform.position+Vector3.up, Vector3.down);
+最初は必ず下向きということだろうか
+全部downだ…
+downとそうでないかで判定が変わるかチェックしよう
+
+現在地と目的地の間に障害物がないかをチェックして、あったらその一歩手前で止まる
+だから方向と大きさはよくよくチェックしなくては
+
+RaycastHit[] hitRays = Physics.RaycastAll(現在位置, 方向、 サイズ);
+RaycastHit[] hitRays = Physics.RaycastAll(transform.position, transform.forward, 3.0F);
+
+大きさがでかいとどうなるんだろう
+
+移動量を決めるときと実際に移動する時どちらがいいんだろう
+
+レイを飛ばす時自分からだと自分もヒットしてしまう
+よくわからないけど、Y軸の1.5は必要なものらしい
+
+
+なんとか移動量を切り離さないと
+どこまでレイを飛ばせばいいのかわからない
+
+どこまで飛ばせばいいのかわからないと
+どこまで判定してどこでストップさせればいいかわからない
+
+斜めだったらどう判定しよう？
+
+え、斜めどうするの
+transform.forwardって・・・
+direction	レイの方向
+これvectorらしいからこれ使えそう
+
+RaycastAll (Vector3 origin, Vector3 direction, float maxDistance= Ma
+
+刈払機
+ブォォォォン
+
+
+以下は、トップのみ罫線を引く例です。
+
+func drawTopBorder(borderWidth: CGFloat, borderColor: UIColor) {
+    var border = CALayer(layer: self.layer)
+    border.frame = CGRectMake(0.0, 0.0, self.frame.size.width, borderWidth)
+    border.backgroundColor = borderColor.CGColor
+    self.layer.addSublayer(border)
+}
+
+
+
+
+
+
+
+
+
+
+
+
